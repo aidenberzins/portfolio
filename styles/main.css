@@ -3350,5 +3350,30 @@ input, select, textarea {
 
 	.text-dark{
 		color: black;
-
 	}
+
+.rainbow, strong:not(.light-bg)
+{
+	cursor: pointer;
+	background: linear-gradient(-45deg, #55CDFC 40%, white ,#e75480 60% );
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  text-align:center;
+  transition: color .2s ease-in-out;
+}
+.font:before{
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+}
+
+.rainbow:hover, strong:not(.light-bg):hover{
+	color:rgba(0,0,0,0);
+}
+
+@keyframes rainbow {
+  0%{background-position: left top}
+  50%{background-position:right bottom}
+  100%{background-position:left top}
+}
